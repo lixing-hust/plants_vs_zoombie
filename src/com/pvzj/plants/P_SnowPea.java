@@ -19,7 +19,7 @@ public class P_SnowPea extends Plant {
 	public P_SnowPea(Floor floor,int gridX,int gridY) {
 		super(floor,gridX,gridY);
 		this.nowBoold=5;
-		this.fireRate=2000;		
+		this.fireRate=2500;
 	}
 
 	@Override
@@ -29,8 +29,8 @@ public class P_SnowPea extends Plant {
 		plant.Y=y;
 		plant.draw(g);
 		if (isFire) {
-			if (System.currentTimeMillis()-fireTime>=2000) {
-				manage.bulletManage.addBullet( super.getGridY(),x+25,y+25,1);;
+			if (System.currentTimeMillis()-fireTime>=2500) {
+				manage.bulletManage.addBullet( super.getGridY(),x+50,y+25,1);;
 				fireTime=System.currentTimeMillis();
 			}			
 		}		

@@ -18,7 +18,7 @@ public class P_Repeater extends Plant {
 	public P_Repeater(Floor floor,int gridX,int gridY) {
 		super(floor,gridX,gridY);
 		this.nowBoold=5;
-		this.fireRate=2000;		
+		this.fireRate=2500;
 	}
 	@Override
 	public void draw(Graphics g) {
@@ -27,9 +27,9 @@ public class P_Repeater extends Plant {
 		plant.Y=y;
 		plant.draw(g);
 		if (isFire) {
-			if (System.currentTimeMillis()-fireTime>=2000) {
-				manage.bulletManage.addBullet( super.getGridY(),x+25,y+25,0);;
-				manage.bulletManage.addBullet( super.getGridY(),x-25,y+25,0);;
+			if (System.currentTimeMillis()-fireTime>=2500) {
+				manage.bulletManage.addBullet( super.getGridY(),x+100,y+25,0);;
+				manage.bulletManage.addBullet( super.getGridY(),x+50,y+25,0);;
 				fireTime=System.currentTimeMillis();
 			}			
 		}	

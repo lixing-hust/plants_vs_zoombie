@@ -12,7 +12,7 @@ public class BulletBasic extends Bullet {
 		this.X=x;
 		this.Y=y;
 		this.basicY=y;
-		this.speed=(int) (Math.random() * 300)+200;
+		this.speed=400;
 	}
 	@Override
 	public void draw(Graphics g) {
