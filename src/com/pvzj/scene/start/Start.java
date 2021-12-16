@@ -40,11 +40,11 @@ public class Start extends GameComponent{
 	public ImageIcon bg14a=new ImageIcon(MyTool.toAbsolutePath("assets/ui\\start/SelectorScreen_Quit2.png"));
 	public ImageIcon bg111=new ImageIcon(MyTool.toAbsolutePath("assets/ui\\start/SelectorScreen_Cloud4.png"));
 
-	public Wbutton bu1=new Wbutton(bg8, bg8a);
-	public Wbutton bu2=new Wbutton(bg12, bg12a);
-	public Wbutton bu3=new Wbutton(bg13, bg13a);
-	public Wbutton bu4=new Wbutton(bg14, bg14a);
-	public Wbutton bu5=new Wbutton(bg7, bg7a);
+	public Wbutton bu1=new Wbutton(bg8, bg8a);//开始游戏
+	public Wbutton bu2=new Wbutton(bg12, bg12a);//选项
+	public Wbutton bu3=new Wbutton(bg13, bg13a);//帮助
+	public Wbutton bu4=new Wbutton(bg14, bg14a);//退出
+	public Wbutton bu5=new Wbutton(bg7, bg7a);//
 
 
 	public Start() {
