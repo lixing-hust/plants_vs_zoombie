@@ -54,15 +54,8 @@ public class BulletManage {
 		for (int i = 0; i < bulletList.size(); i++) {
 			bullets=bulletList.get(i);
 			for (int j = 0; j < bullets.size(); j++) {
-				if (bullets.get(j).speed>0) {
-					bullets.get(j).speed-=100*(GamePanel.frameTime/1000);
-				}
 				
 				bullets.get(j).X+=bullets.get(j).speed*(GamePanel.frameTime/1000);
-				if (bullets.get(j).Y-bullets.get(j).basicY<=50) {
-					bullets.get(j).speedY+=200*(GamePanel.frameTime/1000);
-					bullets.get(j).Y+=bullets.get(j).speedY*(GamePanel.frameTime/1000);
-				}
 				
 				if (bullets.get(j).status==1) {
 					bullets.get(j).draw(g);
