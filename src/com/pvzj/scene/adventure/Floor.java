@@ -191,6 +191,8 @@ public class Floor extends GameComponent {
 	public Plant getPlant(Vector2D vec) {
 		return plantS[(int) vec.x][(int) vec.y];
 	}
+
+
 	public void injuredPlant(Vector2D vec,double size) {
 		 plantS[(int) vec.x][(int) vec.y].nowBoold-=size;
 		 if (plantS[(int) vec.x][(int) vec.y].nowBoold<=0) {
@@ -271,13 +273,13 @@ public class Floor extends GameComponent {
 			if (pointPlantsID != -1) {
 
 				g.drawImage(plantShadow[pointPlantsID].getImage(), mouseX - 15, mouseY - 15,
-						plantShadow[pointPlantsID].getImageObserver());
+						plantShadow[pointPlantsID].getImageObserver());//拖拽动画
 				Vector2D temp = getCheckerBoard(mouseX, mouseY);
 				if (temp != null) {
 					if (!hasPlant(temp)) {
 						temp = getPlantPosition(temp);
 						g.drawImage(plantShadow[pointPlantsID].getImage(), (int) temp.x, (int) temp.y,
-								plantShadow[pointPlantsID].getImageObserver());
+								plantShadow[pointPlantsID].getImageObserver());//放置植物预设动画
 					}
 				}
 			}

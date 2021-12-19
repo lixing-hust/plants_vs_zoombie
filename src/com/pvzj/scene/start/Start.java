@@ -44,7 +44,7 @@ public class Start extends GameComponent{
 	public Wbutton bu2=new Wbutton(bg12, bg12a);//选项
 	public Wbutton bu3=new Wbutton(bg13, bg13a);//帮助
 	public Wbutton bu4=new Wbutton(bg14, bg14a);//退出
-	public Wbutton bu5=new Wbutton(bg7, bg7a);//
+	public Wbutton bu5=new Wbutton(bg7, bg7a);//存档
 
 
 	public Start() {
@@ -127,7 +127,7 @@ public class Start extends GameComponent{
 		g.drawImage(bg4.getImage(), 76, 40, bg4.getImageObserver());
 		g.drawImage(bg5.getImage(), 0, 538, bg4.getImageObserver());
 		g.drawImage(bg6.getImage(), 23, -5, bg4.getImageObserver());
-		//g.drawImage(bg7.getImage(), 23, 130, bg4.getImageObserver());
+		g.drawImage(bg7.getImage(), 23, 130, bg4.getImageObserver());
 		bu5.draw(g);
 		//g.drawImage(bg8.getImage(), 410, 65, bg4.getImageObserver());
 		bu1.draw(g);
