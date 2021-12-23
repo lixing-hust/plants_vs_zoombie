@@ -39,16 +39,6 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (Game.debugMode) {
-			// FPS绘制
-			fpsCount++;
-			if (System.currentTimeMillis() - begeFram >= 1000) {
-				fps = fpsCount;
-				fpsCount = 0;
-				begeFram = System.currentTimeMillis();
-			}
-			g.drawString("FPS:" + fps, 15, 15);
-		}
 		frameTime=System.currentTimeMillis()-nowTime;
 		
 	}

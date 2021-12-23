@@ -111,11 +111,6 @@ public class ZombieBasic extends Zombie {
 		}
 		
 		g.fillOval((int) x + 10, (int) y + 65, 70, 20);
-		// debug
-		if (Game.debugMode) {
-			g.drawRect((int) x, (int) y, Floor.boxwidth, Floor.boxHeight);
-
-		}
 
 	}
 
