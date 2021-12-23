@@ -56,10 +56,6 @@ public class Sun{
 		if(System.currentTimeMillis()-createTime>3000)
 			parent.suns.remove(this);
 		sunDraw(position.x,position.y,g);
-		//debug
-		if (Game.debugMode) {
-			g.drawRect((int)position.x, (int)position.y, 117, 117);
-		}
 	}
 	private void sunDraw(double x,double y,Graphics g) {
 		g.drawImage(sunImg[2].getImage(), (int)x+0, (int)y+0, sunImg[2].getImageObserver());

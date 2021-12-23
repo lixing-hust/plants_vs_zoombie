@@ -38,12 +38,7 @@ public class AnimationImg {
 				state = 2;
 			}
 		}
-		
 
-		// debug
-		if (Game.debugMode) {
-			g.drawRect(X, Y, (int) (img.getIconWidth() * nowScale), (int) (img.getIconHeight() * nowScale));
-		}
 	}
 
 	/**

@@ -292,22 +292,7 @@ public class Floor extends GameComponent {
 				}
 			}
 		}
-		
-		
 
-		// debug
-		if (Game.debugMode) {
-			for (int i = 0; i < 5; i++) {
-				for (int j = 0; j < 9; j++) {
-					g.drawRect(checkerBoardX + j * 81, checkerBoardY + i * 99, boxwidth, boxHeight);
-				}
-			}
-			if (mouseX > checkerBoardX && mouseX < checkerBoardX + boxwidth * 9) {
-				if (mouseY > checkerBoardY && mouseY < checkerBoardY + boxHeight * 5) {
-				}
-			}
-
-		}
 	}
 
 }

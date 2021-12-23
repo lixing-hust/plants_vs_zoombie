@@ -7,8 +7,6 @@ public class Game extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	public static boolean debugMode=false;
 	
 	GamePanel gp = new GamePanel();
 	public Game() {

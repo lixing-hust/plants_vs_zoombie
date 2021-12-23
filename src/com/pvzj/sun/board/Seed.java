@@ -21,7 +21,7 @@ import com.pvzj.scene.start.Wpanel;
 public class Seed extends GameComponent {
 	public static final int sunLength = 117;
 
-	public int sunSum = 5000;
+	public int sunSum = 500;
 	public int sunTime = 9000;
 	public boolean isOver = false;
 	private Floor floor;
