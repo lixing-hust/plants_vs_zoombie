@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import com.pvzj.game.Vector2D;
 import com.pvzj.zombies.Zombie;
 import com.pvzj.zombies.ZombieBasic;
+import com.pvzj.zombies.ZombieConehead;
 
 public class ZombieManage {
 	public Floor manage;
@@ -84,13 +85,13 @@ public class ZombieManage {
 
 	public void randomZombie() {
 		int row = (int) (Math.random() * 5);
-		int state = 0;
+		int state = (int) (Math.random() + 0.5);
 		switch (state) {
 		case 0:
 			zombieList.get(row).add(new ZombieBasic(row, this));
 			break;
 		case 1:
-//			zombieList.get(row).add(new ZombieBasic1(row, this));
+			zombieList.get(row).add(new ZombieConehead(row, this));
 			break;
 		case 2:
 //			zombieList.get(row).add(new ZombieBasic2(row, this));

@@ -12,7 +12,7 @@ public class BulletBasic extends Bullet {
 		this.X=x;
 		this.Y=y;
 		this.basicY=y;
-		this.speed=400;
+		this.speed=600;
 	}
 	@Override
 	public void draw(Graphics g) {

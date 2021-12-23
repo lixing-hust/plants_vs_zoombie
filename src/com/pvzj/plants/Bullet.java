@@ -8,7 +8,7 @@ public abstract class Bullet {
 	// 0飞行 1碰撞 
  	public int status=0;
  	public long hitTime=0;
-	public double speed=600;
+	public double speed=1000;
 	public double speedY=0;
 	public double X;
 	public double basicY;

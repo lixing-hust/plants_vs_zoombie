@@ -21,7 +21,7 @@ import com.pvzj.scene.start.Wpanel;
 public class Seed extends GameComponent {
 	public static final int sunLength = 117;
 
-	public int sunSum = 5000;
+	public int sunSum = 50000;
 	public int sunTime = 9000;
 	public boolean isOver = false;
 	private Floor floor;
@@ -191,12 +191,9 @@ public class Seed extends GameComponent {
 		// 渲染阳光数量
 		g.drawString(sunSum + "", x + 20, 75);
 		// 渲染僵尸波数
-		g.setFont(new Font("微软雅黑", Font.BOLD, 29));
-		g.setColor(Color.black);
-		g.drawString("第" + floor.group + "波僵尸", 640, 555);
 		g.setFont(new Font("微软雅黑", Font.BOLD, 25));
 		g.setColor(Color.white);
-		g.drawString("第" + floor.group + "波僵尸", 650, 550);
+		g.drawString("第 " + floor.group + " 波僵尸", 650, 550);
 		// 渲染阳光
 		for (int i = 0; i < suns.size(); i++) {
 			suns.get(i).draw(g);

@@ -10,7 +10,7 @@ public abstract class Zombie {
 	protected int state=0;
 	public int blood=7;
 	public double atk=1.2;
-	public double speed=15;
+	public double speed=20;
 	public double x;
 	public double y;	
 	public ZombieManage manage;
