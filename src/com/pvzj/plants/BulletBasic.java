@@ -21,11 +21,8 @@ public class BulletBasic extends Bullet {
 			g.drawImage(BulletManage.bulletImgs[0].getImage(), (int)X-BulletManage.bulletImgs[0].getIconWidth()/2, (int)Y-BulletManage.bulletImgs[0].getIconHeight()/2, BulletManage.bulletImgs[0].getImageObserver());
 		}else {
 			g.drawImage(BulletManage.bulletImgs[2].getImage(), (int)X-BulletManage.bulletImgs[2].getIconWidth()/2, (int)Y-BulletManage.bulletImgs[2].getIconHeight()/2, BulletManage.bulletImgs[2].getImageObserver());
-		}		
-		//g.fillOval((int)X-5, (int)Y-5, 10, 10);
-		if (Game.debugMode) {
-			g.drawRect((int)X-BulletManage.bulletImgs[0].getIconWidth()/2, (int)Y-BulletManage.bulletImgs[0].getIconHeight()/2, BulletManage.bulletImgs[0].getIconHeight(), BulletManage.bulletImgs[0].getIconWidth());
 		}
+
 	}
 
 }

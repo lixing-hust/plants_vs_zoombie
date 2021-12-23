@@ -41,9 +41,7 @@ public class Animation {
 			
 		}
 		//debug
-		if (Game.debugMode) {
-			g.drawRect(X, Y, asset.img.get(nowID).getIconWidth(), asset.img.get(nowID).getIconHeight());
-		}
+
 	}
 	/**
 	 * 开始播放并且指定为单次播放

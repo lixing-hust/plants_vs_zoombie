@@ -32,6 +32,7 @@ public class Floor extends GameComponent {
 	public static final int checkerBoardY = 80;
 	public static final int checkerBoard_HEIGHT = boxHeight * 5;
 	public static final int checkerBoard_WIDTH = boxwidth * 9;
+	private ImageIcon shovelImg = new ImageIcon(MyTool.toAbsolutePath("assets/ui/Shovel.png"));
 
 	/**
 	 * 0:游戏中
@@ -119,7 +120,7 @@ public class Floor extends GameComponent {
 			return false;
 		}
 		Vector2D temp = getPlantPosition(positinVec);
-		plantS[(int) positinVec.x][(int) positinVec.y].x = (int) temp.x;
+		plantS[(int) positinVec.x][(int) positinVec.y].x = (int) temp.x;//图像具体坐标
 		plantS[(int) positinVec.x][(int) positinVec.y].y = (int) temp.y;
 		return true;
 	}
@@ -191,6 +192,8 @@ public class Floor extends GameComponent {
 	public Plant getPlant(Vector2D vec) {
 		return plantS[(int) vec.x][(int) vec.y];
 	}
+
+
 	public void injuredPlant(Vector2D vec,double size) {
 		 plantS[(int) vec.x][(int) vec.y].nowBoold-=size;
 		 if (plantS[(int) vec.x][(int) vec.y].nowBoold<=0) {
@@ -268,36 +271,28 @@ public class Floor extends GameComponent {
 			zombieManage.draw(g);
 			seedSun.draw(g);
 			// Draw pointPlant
-			if (pointPlantsID != -1) {
-
+			if (pointPlantsID != -1&&pointPlantsID!=6) {
 				g.drawImage(plantShadow[pointPlantsID].getImage(), mouseX - 15, mouseY - 15,
-						plantShadow[pointPlantsID].getImageObserver());
+						plantShadow[pointPlantsID].getImageObserver());//拖拽动画
 				Vector2D temp = getCheckerBoard(mouseX, mouseY);
 				if (temp != null) {
 					if (!hasPlant(temp)) {
 						temp = getPlantPosition(temp);
 						g.drawImage(plantShadow[pointPlantsID].getImage(), (int) temp.x, (int) temp.y,
-								plantShadow[pointPlantsID].getImageObserver());
+								plantShadow[pointPlantsID].getImageObserver());//放置植物预设动画
 					}
 				}
 			}
-		}
-		
-		
-
-		// debug
-		if (Game.debugMode) {
-			for (int i = 0; i < 5; i++) {
-				for (int j = 0; j < 9; j++) {
-					g.drawRect(checkerBoardX + j * 81, checkerBoardY + i * 99, boxwidth, boxHeight);
+			if(pointPlantsID==6) {
+				g.drawImage(shovelImg.getImage(), mouseX - 15, mouseY - 15, shovelImg.getImageObserver());
+				Vector2D temp1 = getCheckerBoard(mouseX, mouseY);
+				if (temp1 != null) {
+					temp1 = getPlantPosition(temp1);
+					g.drawImage(shovelImg.getImage(), (int) temp1.x, (int) temp1.y, shovelImg.getImageObserver());
 				}
 			}
-			if (mouseX > checkerBoardX && mouseX < checkerBoardX + boxwidth * 9) {
-				if (mouseY > checkerBoardY && mouseY < checkerBoardY + boxHeight * 5) {
-				}
-			}
-
 		}
+
 	}
 
 }
