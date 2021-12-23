@@ -106,6 +106,12 @@ public class Seed extends GameComponent {
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		int CardID;
+		if(e.getX()>x + bgImageIcon.getIconWidth()&&e.getX()<x + bgImageIcon.getIconWidth()+shovelImg.getIconWidth()) {
+			if (e.getY() > 0 && e.getY() < shovelImg.getIconHeight()) {
+				floor.setPointPlant(6);
+				selectCardID=6;
+			}
+		}
 		if (e.getY() > 0 && e.getY() <= Card.CARD_HEIGHT) {
 			if (e.getX() > cardX && e.getX() < cardX + Card.CARD_WIATH * 6) {
 				CardID = (e.getX() - cardX) / Card.CARD_WIATH;
@@ -121,16 +127,26 @@ public class Seed extends GameComponent {
 			}
 		}
 		// 进行放置植物
-		if (selectCardID != -1) {
+		if (selectCardID != -1&&selectCardID!=6) {
 			Vector2D temp = floor.getCheckerBoard(e.getX(), e.getY());
 			if (temp != null) {
 				floor.setPlant(temp, cards[selectCardID].plantID);
 				sunSum -= cards[selectCardID].price;
 				cards[selectCardID].reCD();
 				selectCardID = -1;
+				floor.setPointPlant(-1);
+			}
+
+		}
+		if(selectCardID==6){
+			Vector2D temp=floor.getCheckerBoard(e.getX(),e.getY());
+			if(temp!=null){
+				floor.reMovePlant((int)temp.x,(int)temp.y);
+				selectCardID=-1;
+				floor.setPointPlant(-1);
 			}
 		}
-		floor.setPointPlant(-1);
+		//floor.setPointPlant(-1);
 	}
 
 	@Override

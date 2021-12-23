@@ -15,7 +15,7 @@ public class Sun{
 	public Vector2D target;
 	public Seed parent;
 	Vector2D spendVec=new Vector2D();
-	
+	private long createTime=System.currentTimeMillis();
 	private static ImageIcon[] sunImg=new ImageIcon[3];
 	static {
 		sunImg[0]=new ImageIcon(MyTool.toAbsolutePath("assets/img/sun1.png"));
@@ -53,6 +53,8 @@ public class Sun{
 				position.x+=(GamePanel.frameTime/1000)*100;
 			}
 		}
+		if(System.currentTimeMillis()-createTime>3000)
+			parent.suns.remove(this);
 		sunDraw(position.x,position.y,g);
 		//debug
 		if (Game.debugMode) {
