@@ -37,6 +37,7 @@ public class ZombieBasic extends Zombie {
 
 	public ZombieBasic(int rowIndex,ZombieManage manage) {
 		super(manage);
+		super.blood=7;
 		x = Floor.checkerBoardX + Floor.boxwidth * 9;
 		y = Floor.checkerBoardY + Floor.boxHeight * (rowIndex);
 		an_Run.X = (int) x;
@@ -45,6 +46,7 @@ public class ZombieBasic extends Zombie {
 	
 	public ZombieBasic(int rowIndex,ZombieManage manage,int x) {
 		super(manage);
+		super.blood=7;
 		this.x = Floor.checkerBoardX + Floor.boxwidth * 9+x;
 		this.y = Floor.checkerBoardY + Floor.boxHeight * (rowIndex);
 		an_Run.X = (int) x;

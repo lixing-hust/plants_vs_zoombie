@@ -43,8 +43,8 @@ public class Sun{
 				return;
 			}
 			spendVec.normaliz();			
-			position.x+=(GamePanel.frameTime/1000)*spendVec.x*400;
-			position.y+=(GamePanel.frameTime/1000)*spendVec.y*400;	
+			position.x+=(GamePanel.frameTime/1000)*spendVec.x*800;
+			position.y+=(GamePanel.frameTime/1000)*spendVec.y*800;
 		}else {
 			if (position.y<target.y) {
 				position.y+=(GamePanel.frameTime/1000)*100;

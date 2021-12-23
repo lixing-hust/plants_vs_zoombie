@@ -12,7 +12,7 @@ public class BulletIce extends Bullet {
 		this.X=x;
 		this.Y=y;
 		this.basicY=y;
-		this.speed=400;
+		this.speed=600;
 		this.buff=1;
 	}
 	@Override
